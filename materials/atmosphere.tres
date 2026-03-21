@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bxoyfqkysx7cg"]
+
+[ext_resource type="Shader" uid="uid://dj0oymmogvgoj" path="res://shaders/atmosphere.gdshader" id="1"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1")
+shader_parameter/kr = 0.0035
+shader_parameter/km = 0.001
+shader_parameter/sun_intensity = 20.0
+shader_parameter/g = -0.95
+shader_parameter/scale_depth = 0.25
+shader_parameter/num_samples = 4
+shader_parameter/wavelength_r = 0.65
+shader_parameter/wavelength_g = 0.57
+shader_parameter/wavelength_b = 0.475
+shader_parameter/camera_pos = Vector3(0, 0, 0)
+shader_parameter/sun_direction = Vector3(0, 0, 0)
+shader_parameter/camera_height = 0.0
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 0.0
+shader_parameter/atm_scale = 0.0

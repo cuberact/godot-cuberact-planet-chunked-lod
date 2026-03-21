@@ -1,0 +1,58 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bphvp8xhcpgqc"]
+
+[ext_resource type="Shader" uid="uid://dsb3bwowmcik2" path="res://shaders/terrain.gdshader" id="1"]
+[ext_resource type="Texture2D" uid="uid://dnxc8cpk1fl3v" path="res://textures/sand.jpg" id="2"]
+[ext_resource type="Texture2D" uid="uid://b2pilf41bcqn0" path="res://textures/grass.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://cup1luyv5m3mh" path="res://textures/ground.jpg" id="4"]
+[ext_resource type="Texture2D" uid="uid://bm2egl8lbfleg" path="res://textures/gravel.jpg" id="5"]
+[ext_resource type="Texture2D" uid="uid://0kcmmy2vowi" path="res://textures/snow.jpg" id="6"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1")
+shader_parameter/compute_normals = true
+shader_parameter/ambient_light = 0.004
+shader_parameter/shadow_strength = 3.0
+shader_parameter/continental_enabled = true
+shader_parameter/continental_large_scale = 0.096
+shader_parameter/continental_medium_scale = 0.041
+shader_parameter/continental_large_weight = 0.305
+shader_parameter/sea_level = -0.123
+shader_parameter/coast_width = 0.015
+shader_parameter/mountains_enabled = true
+shader_parameter/mountain_scale = 1.0
+shader_parameter/mountain_octaves = 3
+shader_parameter/mountain_height = 0.465
+shader_parameter/mountain_sharpness = 4.0
+shader_parameter/detail_enabled = true
+shader_parameter/detail_scale = 10.0
+shader_parameter/detail_octaves = 4
+shader_parameter/detail_strength = 0.1
+shader_parameter/micro_enabled = true
+shader_parameter/micro_scale = 238.372
+shader_parameter/micro_strength = 0.0011
+shader_parameter/color_deep_ocean = Color(0.15, 0.25, 0.54, 1)
+shader_parameter/color_ocean = Color(0.31, 0.46, 0.74, 1)
+shader_parameter/color_shallow_water = Color(0.42, 0.7, 0.88, 1)
+shader_parameter/color_beach = Color(0.87, 0.83, 0.65, 1)
+shader_parameter/color_lowland = Color(0.58, 0.8, 0.42, 1)
+shader_parameter/color_highland = Color(0.42, 0.63, 0.31, 1)
+shader_parameter/color_rock = Color(0.7, 0.6, 0.46, 1)
+shader_parameter/color_high_rock = Color(0.74, 0.68, 0.6, 1)
+shader_parameter/color_snow_line = Color(0.88, 0.88, 0.9, 1)
+shader_parameter/color_snow_peak = Color(0.92, 0.92, 0.92, 1)
+shader_parameter/textures_enabled = true
+shader_parameter/texture_scale = 10.0
+shader_parameter/slope_threshold = 0.6
+shader_parameter/slope_blend = 0.5
+shader_parameter/texture_near = 1.0000000475
+shader_parameter/texture_far = 10.0
+shader_parameter/tex_sand = ExtResource("2")
+shader_parameter/tex_grass = ExtResource("3")
+shader_parameter/tex_ground = ExtResource("4")
+shader_parameter/tex_gravel = ExtResource("5")
+shader_parameter/tex_snow = ExtResource("6")
+shader_parameter/planet_radius = 0.0
+shader_parameter/terrain_height = 0.0
+shader_parameter/planet_origin = Vector3(0, 0, 0)
+shader_parameter/sun_direction = Vector3(0, 0, 0)

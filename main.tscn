@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c7d7b5bg272a6"]
+
+[ext_resource type="Texture2D" uid="uid://bkyao1xvrncdb" path="res://textures/stars.jpg" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://c7b4hn1r8jtr5" path="res://scripts/planet.gd" id="5_planet"]
+[ext_resource type="Script" uid="uid://c0hwtu5jppxa1" path="res://scripts/planet_camera.gd" id="6_planet_camera"]
+[ext_resource type="Script" uid="uid://q6ynhcax0wu5" path="res://scripts/example.gd" id="7_example"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lquwl"]
+panorama = ExtResource("4_1bvp3")
+
+[sub_resource type="Sky" id="Sky_7mycd"]
+sky_material = SubResource("PanoramaSkyMaterial_lquwl")
+
+[sub_resource type="Environment" id="Environment_272bh"]
+background_mode = 2
+background_energy_multiplier = 0.32
+sky = SubResource("Sky_7mycd")
+ambient_light_source = 1
+reflected_light_source = 1
+tonemap_white = 2.0
+
+[node name="Main" type="Node3D" unique_id=1793472644]
+
+[node name="PlanetCamera" type="Camera3D" parent="." unique_id=2089533179 node_paths=PackedStringArray("planet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16000)
+near = 1.0
+far = 100000.0
+script = ExtResource("6_planet_camera")
+planet = NodePath("../Planet")
+
+[node name="Planet" type="Node3D" parent="." unique_id=34699425]
+script = ExtResource("5_planet")
+metadata/_custom_type_script = "uid://c7b4hn1r8jtr5"
+
+[node name="Example" type="Node" parent="." unique_id=1306506341]
+script = ExtResource("7_example")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2039396142]
+environment = SubResource("Environment_272bh")

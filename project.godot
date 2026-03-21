@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Chunked LOD Planet"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.6")
+config/icon="uid://tnnrbdk0dw22"
+
+[display]
+
+window/size/viewport_width=1980
+window/size/viewport_height=1080
+window/size/sharp_corners=true
+window/vsync/vsync_mode=0
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=2
+environment/defaults/default_clear_color=Color(0.05842053, 0.058420613, 0.058420606, 1)

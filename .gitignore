@@ -1,0 +1,16 @@
+# Godot
+/.godot/
+*.import
+export_presets.cfg
+
+# IDE
+/.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Exports
+*.export.cfg
+/export/
